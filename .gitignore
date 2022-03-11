@@ -44,3 +44,15 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
