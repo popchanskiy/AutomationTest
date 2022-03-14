@@ -3,9 +3,12 @@ package lesson9.tests;
 import com.codeborne.selenide.*;
 import com.codeborne.selenide.logevents.*;
 import io.qameta.allure.selenide.*;
+import lesson9.helpers.*;
 import lesson9.pages.forms.practice_form_page.*;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.remote.*;
+
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class BaseTest {
     StudentRegistrationFormPage automationPracticeForm = new StudentRegistrationFormPage();
@@ -23,6 +26,14 @@ public class BaseTest {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+    }
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+        closeWebDriver();
     }
 
 }
