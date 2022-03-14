@@ -33,7 +33,7 @@ public class StudentRegistrationFormPageTest extends BaseTest {
                 .setSubject("Hindi")
                 .setHobbies("Sports")
                 .setHobbies("Reading")
-                .uploadPicture("file.txt")
+                //.uploadPicture("file.txt")
                 .setAddress(address)
                 .selectState("Haryana")
                 .selectCity("Panipat")
