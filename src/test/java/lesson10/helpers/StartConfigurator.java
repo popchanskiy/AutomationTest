@@ -7,17 +7,8 @@ public class StartConfigurator {
     }
 
     public static String getBrowserVersion() {
-        String version = getBrowser();
-        switch (version) {
-            case "opera":
-                return System.getProperty("version", "76");
-            case "firefox":
-                return System.getProperty("version", "88");
 
-            case "chrome":
-                return System.getProperty("version", "90");
-        }
-        return "";
+        return System.getProperty("version");
     }
 
 
