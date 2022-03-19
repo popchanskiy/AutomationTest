@@ -54,9 +54,10 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
-    task configurated_tests(type: Test) {
-        useJUnitPlatform {
-            includeTags "configured"
-        }
+
+}
+task configured_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "configured"
     }
 }
