@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.*;
 @Disabled
 @Ignore
 public class StudentRegistrationFormPageTest extends BaseTest {
-    Faker faker = new Faker();
+   /* Faker faker = new Faker();
     String firstName = faker.name().firstName();
     String lastName = faker.name().lastName();
     String email = faker.internet().emailAddress();
@@ -45,5 +45,5 @@ public class StudentRegistrationFormPageTest extends BaseTest {
                 .tableShouldHaveTexts(firstName + " " + lastName, email, "Male", phoneNumber, "01 March,1998",
                         "English, Hindi", "Sports, Reading", "file.txt", address, "Haryana Panipat");
 
-    }
+    }*/
 }
