@@ -1,6 +1,6 @@
 package lesson10.helpers;
 
-public class RunConfigurator {
+public class StartConfigurator {
     public static String getBrowser() {
 
         return System.getProperty("browser", "chrome");// Supported values: "chrome", "firefox", "ie", "opera", "edge"
@@ -10,12 +10,12 @@ public class RunConfigurator {
         String version = getBrowser();
         switch (version) {
             case "opera":
-                return System.getProperty("version", "76.0");
+                return System.getProperty("version", "76");
             case "firefox":
-                return System.getProperty("version", "88.0");
+                return System.getProperty("version", "88");
 
             case "chrome":
-                return System.getProperty("version", "90.0");
+                return System.getProperty("version", "90");
         }
         return "";
     }
