@@ -1,4 +1,4 @@
-package lesson9.tests;
+package lesson10.tests;
 
 import com.github.javafaker.*;
 import io.qameta.allure.*;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.*;
 
-@Disabled
+
 public class StudentRegistrationFormPageTest extends BaseTest {
     Faker faker = new Faker();
     String firstName = faker.name().firstName();
@@ -19,6 +19,7 @@ public class StudentRegistrationFormPageTest extends BaseTest {
     @Feature("Student Registration Form")
     @Story("after filling form get result table")
     @DisplayName("check fillin form and get result table positive test")
+    @Tag("configured")
     @Test
     void regFormShouldBeSubmittedAndVerified() {
         automationPracticeForm

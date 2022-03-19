@@ -1,16 +1,15 @@
-package lesson9.tests;
+package lesson10.tests;
 
 import com.codeborne.selenide.*;
 import com.codeborne.selenide.logevents.*;
 import io.qameta.allure.selenide.*;
-import lesson9.helpers.*;
-import lesson9.pages.forms.practice_form_page.*;
+import lesson10.helpers.*;
+import lesson10.pages.forms.practice_form_page.*;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.remote.*;
 
 import static com.codeborne.selenide.Selenide.*;
 
-@Disabled
 public class BaseTest {
     StudentRegistrationFormPage automationPracticeForm = new StudentRegistrationFormPage();
     SubmittingReportPage submittingReportPage = new SubmittingReportPage();
@@ -28,7 +27,6 @@ public class BaseTest {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
     }
-
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
