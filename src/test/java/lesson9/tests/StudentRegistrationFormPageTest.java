@@ -2,11 +2,13 @@ package lesson9.tests;
 
 import com.github.javafaker.*;
 import io.qameta.allure.*;
+import jdk.nashorn.internal.ir.annotations.*;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.*;
 
 @Disabled
+@Ignore
 public class StudentRegistrationFormPageTest extends BaseTest {
     Faker faker = new Faker();
     String firstName = faker.name().firstName();
