@@ -12,9 +12,12 @@ public class Configurator {
     }
 
 
+    public static String getURL() {
+        return System.getProperty("URL",  "@selenoid.autotests.cloud/wd/hub");
+    }
     public static String getRemoteURL() {
         return System.getProperty("remoteURL", "https://" + getRemoteURLLogin() + ":"
-                + getRemoteURLPassword() + "@selenoid.autotests.cloud/wd/hub");
+                + getRemoteURLPassword() + getURL());
     }
 
     public static String getRemoteURLLogin() {
