@@ -1,6 +1,6 @@
 package lesson10.helpers;
 
-public class StartConfigurator {
+public class Configurator {
     public static String getBrowser() {
 
         return System.getProperty("browser", "chrome");// Supported values: "chrome", "firefox", "ie", "opera", "edge"
@@ -13,16 +13,25 @@ public class StartConfigurator {
 
 
     public static String getRemoteURL() {
-        return System.getProperty("remoteURL", "https://" + getLogin() + ":"
-                + getPassword() + "@selenoid.autotests.cloud/wd/hub");
+        return System.getProperty("remoteURL", "https://" + getRemoteURLLogin() + ":"
+                + getRemoteURLPassword() + "@selenoid.autotests.cloud/wd/hub");
     }
 
-    public static String getLogin() {
+    public static String getRemoteURLLogin() {
+        return System.getProperty("remoteURLLogin", "user1");
+    }
+
+    public static String getRemoteURLPassword() {
+        return System.getProperty("remoteURLPassword",
+                "1234");
+    }
+
+    /*public static String getLogin() {
         return System.getProperty("login", "user1");
     }
 
     public static String getPassword() {
         return System.getProperty("password", "1234");
-    }
+    }*/
 
 }
